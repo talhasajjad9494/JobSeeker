@@ -39,6 +39,9 @@ public class JobApplyWebPage extends Helper {
         try {
             Connection connection = DriverManager.getConnection(databaseURL, userName, password);
             Statement statement = connection.createStatement();
+            String sqlUpdateQuery = "Update job_applicants SET seeker_id = 1 Where seeker_id = 9897";
+            int rowsAffected = statement.executeUpdate(sqlUpdateQuery);
+            System.out.println("Affected Row count is: "+rowsAffected);
             String sqlQuery = "Select * From seekers Where id = 9897";
             ResultSet resultSet = statement.executeQuery(sqlQuery);
             while (resultSet.next()) {
