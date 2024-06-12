@@ -21,7 +21,8 @@ public class BrowserFactory {
         if (browserName.equalsIgnoreCase("Chrome")) {
             /*WebDriverManager.chromedriver().driverVersion("120.0.6099.109").setup();*/
             /*WebDriverManager.chromedriver().driverVersion("122.0.6261.94").setup();*/
-            WebDriverManager.chromedriver().setup();
+//            WebDriverManager.chromedriver().setup();
+            WebDriverManager.chromedriver().clearDriverCache().setup();
             ChromeOptions ops = new ChromeOptions();
             ops.addArguments("--remote-allow-origins=*");
             ops.addArguments("--disable-notifications");
