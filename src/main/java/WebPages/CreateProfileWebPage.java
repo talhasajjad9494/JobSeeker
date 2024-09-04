@@ -196,7 +196,7 @@ public class CreateProfileWebPage extends Helper {
 
     public void createProfile() throws Exception {
         fillPersonalDetails();
-        introVideo();
+        // introVideo();
         fillPersonalSummary();
         Waits.clickButton(driver, addRoleButton, 30);
         String fakeCompanyName = fakerObj.company().name();
